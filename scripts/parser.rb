@@ -45,4 +45,5 @@ while in_box
   File.open("pageno", "w"){|f| f.puts page.to_s}
   doc = Nokogiri::XML(open(base_path + "&p=#{page}"))
 end
+#page 3534 is the last blackbox page
 
