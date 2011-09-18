@@ -1,9 +1,10 @@
 Usage:
 -------------------
 
-1. Scripts: Check out the scenarios folder. I've created a sample scenario to show you how you can analyse the data.
+Scripts: Check out the scenarios folder. I've created a sample scenario to show you how you can analyse the data.
 
-2. Console: 
+Console: 
+
   > irb
   
   Then as the first command write 
@@ -23,36 +24,38 @@ If anyone wants to write install instructions for non apple machines, please sen
 
 *OSX instructions*
 
-1. Install Homebrew :  http://mxcl.github.com/homebrew/ The install is simple.
-2. Use Homebrew to install git and mongodb
+Install Homebrew :  http://mxcl.github.com/homebrew/ The install is simple.
+
+Use Homebrew to install git and mongodb
   
   > brew install mongodb
   
   > brew install git
   
-3. Install RVM 
+Install RVM 
   
   Visit http://beginrescueend.com/ and checkout their install script.
   
-4. Install Ruby 1.9.2
+Install Ruby 1.9.2
   
   > rvm install 1.9.2
   
-5. Create a folder for the code and clone the repository into it
+Create a folder for the code and clone the repository into it
   
   > git clone git@github.com:Hitonagashi/fumbbl_games.git
   
-6. CD into the directory. RVM should prompt you to examine the RVMRC file (tells it what rubies and gems to use.). It's safe, so type "y" to allow it. If you want to look at it, be my guest, it's the .rvmrc file in the root folder.
-7. Install bundler to allow for management of gems
+CD into the directory. RVM should prompt you to examine the RVMRC file (tells it what rubies and gems to use.). It's safe, so type "y" to allow it. If you want to look at it, be my guest, it's the .rvmrc file in the root folder.
+
+Install bundler to allow for management of gems
   
   > gem install bundler
   
-8. Install required gems
+Install required gems
   
   > bundle install
   
-9. Import the database from the dump
+Import the database from the dump
   
   > ./mongorestore dump/fumbbl
   
-10. Good to go!
+Now you should be good to go!
