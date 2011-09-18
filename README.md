@@ -6,6 +6,9 @@ Usage:
 2. Console: 
 
 > irb
+
+Then as the first command write 
+
 > require "config/initialize"
 
 Those commands will put you into a console with all the requirements and database connection opened. You can then use Mongoid syntax to retrieve data from the database. (http://mongoid.org/docs/querying/criteria.html). I'll be writing scenarios up that you can use as base documents if you want.
@@ -25,6 +28,7 @@ If anyone wants to write install instructions for non apple machines, please sen
 2. Use Homebrew to install git and mongodb
 
 > brew install mongodb
+
 > brew install git
 
 3. Install RVM 
