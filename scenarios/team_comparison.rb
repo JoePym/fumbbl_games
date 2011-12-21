@@ -6,10 +6,10 @@ require "./#{File.dirname(__FILE__)}/../config/initialize.rb"
 
 data = {}
 box_games = Game.where(:division => "10")
+puts box_games.count.inspect
 current_bracket = [box_games.asc(:home_rating).last.home_rating, box_games.asc(:away_rating).last.away_rating].max
 
 while current_bracket > 0
-  puts current_bracket
   data[current_bracket] ||= {}
   games = box_games.where(:home_rating.lte => current_bracket, :home_rating.gte => current_bracket - 25)
   puts games.count
@@ -26,6 +26,9 @@ while current_bracket > 0
     data[current_bracket][game.away_race][game.home_race][:total] += 1
     if game.home_tds > game.away_tds
       data[current_bracket][game.home_race][game.away_race][:wins] += 1
+    elsif game.home_tds == game.away_tds
+      data[current_bracket][game.home_race][game.away_race][:wins] += 0.5
+      data[current_bracket][game.away_race][game.home_race][:wins] += 0.5
     elsif game.away_tds > game.home_tds
       data[current_bracket][game.away_race][game.home_race][:wins] += 1
     end
